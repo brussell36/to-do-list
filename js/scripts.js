@@ -5,16 +5,23 @@ function displayUserTaskList(taskListToDisplay) {
   let userTask = $("ul#output");
   let htmlForTaskInfo = "";
   taskListToDisplay.tasks.forEach(function(task) {
-    htmlForTaskInfo += "<li id=" + task.id + ">" + task + "</li>"
+    htmlForTaskInfo += "<li id=" + task.id + ">" + task.tasks + "</li>"
   });
   userTask.html(htmlForTaskInfo);
 };
 
+function attachTaskListeners(){
+  $("ul#output").on("click", "li", function() {
+    console.log(this.id);
+  });
+};
+
 $(document).ready(function() {
+  attachTaskListeners();
   $("form#entries").submit(function(event) {
     event.preventDefault();
     const tasks = $("input#tasks").val();
-    let newTask = new Tasks(tasks);
+    let newTask = new Blaah(tasks);
     taskList.addTask(newTask);
     console.log(taskList);
     displayUserTaskList(taskList);
@@ -38,6 +45,6 @@ TaskList.prototype.assignId = function() {
 }
 
 // Tasks Business Logic
-function Tasks(tasks) {
+function Blaah(tasks) {
   this.tasks = tasks;
 }
