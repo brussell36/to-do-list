@@ -7,9 +7,22 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <title>To-Do List</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>To-Do List</h1>
+    <form id="entries">
+      <div class="form-group">
+        <label for="tasks">Enter your task:</label>
+        <input id="tasks" type="text">
+        <input type ="checkbox" name="" value="completed">Check when task is completed<br>
+      </div>
+      <button type="submit" class="btn btn-primary">Add to list!</button>
+    </form>
+    <div id="result">
+      
+    </div>
+  </div>
 </body>
 </html>

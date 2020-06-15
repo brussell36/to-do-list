@@ -1,18 +1,32 @@
-# _{Application Name}_
+# _To-Do List_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Takes user input to create a list of tasks to be completed, 6/15/2020_
 
-#### By _**Ben Russell**_
+#### By _**Ben Russell, Megan Hepner**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This App will take user inputs and list them out for the user to see. When a task is completed they will be able to check a box and have that list item taken off._
+
+## Specifications
+
+# Behavior
+* Take in user input and show below the form field in a list
+* Input: Wash Dishes
+* Output: *Wash Dishes with a checkbox next to it
+
+# Behavior
+* When checkbox is clicked, it will remove that item from the list
+* Input: checks box next to Wash Dishes
+* Output: Wash Dishes is removed from the list
+
+
 
 ## Setup/Installation Requirements
 
 ### Open by downloading
 
-1. _Download this repository onto your computer._
+1. _Download this repository onto your computer https://github.com/brussell36/to-do-list.git._
 2. _Double click index.html to open in your web browser._
 
 ### Open via Bash/Gitbash
