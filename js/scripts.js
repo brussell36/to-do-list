@@ -1,17 +1,27 @@
 // UI Logic
 let taskList = new TaskList();
 
+function displayUserTaskList(taskListToDisplay) {
+  let userTask = $("ul#output");
+  let htmlForTaskInfo = "";
+  taskListToDisplay.tasks.forEach(function(task) {
+    htmlForTaskInfo += "<li id=" + task.id + ">" + task + "</li>"
+  });
+  userTask.html(htmlForTaskInfo);
+};
+
 $(document).ready(function() {
-  $("#tasks").submit(function(event) {
+  $("form#entries").submit(function(event) {
     event.preventDefault();
     const tasks = $("input#tasks").val();
     let newTask = new Tasks(tasks);
     taskList.addTask(newTask);
-    console.log(tasklist.tasks);
+    console.log(taskList);
+    displayUserTaskList(taskList);
   });
 });
 
-// Business Logic
+// TaskList Business Logic
 function TaskList() {
   this.tasks = [];
   this.currentId = 0;
@@ -27,6 +37,7 @@ TaskList.prototype.assignId = function() {
   return this.currentId;
 }
 
+// Tasks Business Logic
 function Tasks(tasks) {
-  this.tasks = tasks
+  this.tasks = tasks;
 }
